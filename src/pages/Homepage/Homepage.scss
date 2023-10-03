@@ -1,0 +1,113 @@
+.homepage__container{
+    padding-top: 30px;
+    .page__title{
+        font-family: 'Roboto', sans-serif;
+        font-size: 48px;
+        color: #ffffff;
+    }
+    .sort__window__section{
+        display: flex;
+        align-items: center;
+        justify-self: center;
+        .viral__title{
+            font-family: 'Roboto', sans-serif;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 40px;
+            text-align: right;
+        }
+    }
+    .pagination{
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        margin: 40px 0;
+        ul{
+            li{
+                button{
+                    border-color: #ffffff !important;
+                    color: #ffffff !important;
+                }
+            }
+        }
+    }
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+    padding-top: 25px;
+    width: 100%;
+
+        a{
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+            margin: auto;
+            width: 100%;
+            justify-content: center;
+            border-radius: 5px;
+            &:hover{
+                background-color: #747474;
+                transition: .2s ease-in;
+            }
+        }
+}
+.grid-triple-container{
+    display: grid;
+    grid-template-columns: auto auto ;
+    row-gap: 25px;
+    padding: 15px;
+    justify-content: space-between;
+    text-align: center;
+    .section__filter{
+      display:flex;
+      .section__input{
+        margin-right: 15px;
+      }
+    }
+}
+
+@media (max-width:992px) {
+    .homepage__container{
+        .page__title{
+            font-size: 42px;
+        }
+    }
+    .grid-container{
+        grid-template-columns: auto ; 
+    }
+    .grid-triple-container{
+        padding: 0;
+        .section__filter{
+            display:block;
+            .section__input{
+                margin-right: 0;
+                margin-bottom: 15px;
+              }
+        }
+        .sort__window__section{
+            display: flex;
+            flex-direction: column;
+            .viral__title{
+                order: 2;
+                margin: 25px 0;
+            }
+            .window__filter{
+                order: 1;
+            }
+        }
+    }
+    .pagination{
+        ul{
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            li{
+                margin-top: 5px;
+            }
+        }
+    }
+}
